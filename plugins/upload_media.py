@@ -22,7 +22,7 @@ async def upload_media(client: Client, message: Message):
         return
     
     if await db.is_banned(message.from_user.id):
-        return await message.reply(text="<b>🚫 ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ !\n\n👮‍♂️ ᴄᴏɴᴛᴀᴄᴛ : @AV_OWNER_BOT</b>", quote=True, parse_mode=enums.ParseMode.HTML)
+        return await message.reply(text="<b>🚫 ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ !\n\n👮‍♂️ ᴄᴏɴᴛᴀᴄᴛ :@SayaProject</b>", quote=True, parse_mode=enums.ParseMode.HTML)
 
     # ✅ GET CURRENT UPLOAD MODE FROM DB
     upload_mode = await db.get_upload_mode()
@@ -68,7 +68,7 @@ async def upload_media(client: Client, message: Message):
 
             if uploaded_links:
                 formatted_links = "\n".join(uploaded_links)
-                await status_msg.edit_text(text=f"<b>✅ ᴀʟʙᴜᴍ ᴜᴘʟᴏᴀᴅᴇᴅ !</b>\n\n{formatted_links}\n\n<b>⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : ᴀᴠ ʙᴏᴛᴢ</b>", parse_mode=enums.ParseMode.HTML, disable_web_page_preview=True)
+                await status_msg.edit_text(text=f"<b>✅ ᴀʟʙᴜᴍ ᴜᴘʟᴏᴀᴅᴇᴅ !</b>\n\n{formatted_links}\n\n<b>⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : @SayaProject</b>", parse_mode=enums.ParseMode.HTML, disable_web_page_preview=True)
                 
                 if LOG_CHANNEL:
                     try:
