@@ -65,7 +65,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif data == "about":
         buttons = [[
-            InlineKeyboardButton('💻 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', url='https://github.com/Botsthe/IMG-TO-LINK-BOT.git')
+            InlineKeyboardButton('💻 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', url='https://github.com/SayaTeam')
         ],[
             InlineKeyboardButton('🏠 ʜᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('✖️ ᴄʟᴏsᴇ', callback_data='close_data')
