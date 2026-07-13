@@ -11,7 +11,7 @@ class script(object):
 🛡️ sᴇᴄᴜʀᴇ & ᴘʀɪᴠᴀᴛᴇ
 🖥️ ᴡᴇʙsɪᴛᴇ : <a href='{}'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
 
-ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/AV_OWNER_BOT'>ᴀᴍᴀɴ ᴅᴇᴠᴇʟᴏᴘᴇʀ</a></b>"""
+ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/szxlie'>ᴀᴍᴀɴ ᴅᴇᴠᴇʟᴏᴘᴇʀ</a></b>"""
     
 
     
@@ -54,8 +54,8 @@ class script(object):
     ABOUT_TXT = """<b>╭─━━━ ✦ ABOUT BOT ✦ ━━━─╮
 │
 │ 🤖 ɴᴀᴍᴇ : <code>{}</code>
-│ 👑 ᴏᴡɴᴇʀ : <a href="https://t.me/AV_OWNER_BOT">ᴀᴍᴀɴ ᴅᴇᴠᴇʟᴏᴘᴇʀ</a>
-│ 📢 ᴜᴘᴅᴀᴛᴇs : <a href="https://t.me/AV_BOTz_UPDATE">UPDATE CHANNEL</a>
+│ 👑 ᴏᴡɴᴇʀ : <a href="https://t.me/szxlie">ᴀᴍᴀɴ ᴅᴇᴠᴇʟᴏᴘᴇʀ</a>
+│ 📢 ᴜᴘᴅᴀᴛᴇs : <a href="https://t.me/SayaProject">UPDATE CHANNEL</a>
 │ 🚀 ᴠᴇʀsɪᴏɴ : v2.6
 │ 🐍 ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ 3
 │ 📚 ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ
