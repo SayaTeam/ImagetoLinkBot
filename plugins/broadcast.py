@@ -6,13 +6,6 @@ from database.users_db import db
 from info import ADMINS
 from utils import temp, get_readable_time, users_broadcast
 
-# ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-# ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-# ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-# sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-# ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-# ────────────────────────────────────────
-
 lock = asyncio.Lock()
 
 @Client.on_message(filters.command("broadcast") & filters.user(ADMINS))
@@ -22,12 +15,7 @@ async def broadcast_command(bot, message):
     if lock.locked():
         return await message.reply("<b>⚠️ ʙʀᴏᴀᴅᴄᴀsᴛ ɪs ᴀʟʀᴇᴀᴅʏ ʀᴜɴɴɪɴɢ !</b>\n\n<i>ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ғᴏʀ ɪᴛ ᴛᴏ ᴄᴏᴍᴘʟᴇᴛᴇ.</i>", quote=True)
     
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
 
     msg_id = message.reply_to_message.id
     await message.reply(
@@ -57,12 +45,7 @@ async def broadcast_confirm(bot, query):
         done, success, failed = 0, 0, 0
         temp.USERS_CANCEL = False
 
-        # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-        # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-        # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-        # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-        # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-        # ────────────────────────────────────────
+        
 
         async for user in users:
             if temp.USERS_CANCEL:
@@ -79,12 +62,7 @@ async def broadcast_confirm(bot, query):
                 btn = [[InlineKeyboardButton('✖️ ᴄᴀɴᴄᴇʟ ʙʀᴏᴀᴅᴄᴀsᴛ', callback_data='broadcast_cancel#users')]]
                 await b_sts.edit(f"<b>📢 ʙʀᴏᴀᴅᴄᴀsᴛ ɪɴ ᴘʀᴏɢʀᴇss...</b>\n➖➖➖➖➖➖➖➖➖➖➖\n<b>👥 ᴛᴏᴛᴀʟ ᴜsᴇʀs :</b> <code>{total_users}</code>\n<b>✅ sᴜᴄᴄᴇss :</b> <code>{success}</code>\n<b>❌ ғᴀɪʟᴇᴅ :</b> <code>{failed}</code>\n<b>🔄 ᴄᴏᴍᴘʟᴇᴛᴇᴅ :</b> <code>{done}</code>\n➖➖➖➖➖➖➖➖➖➖➖", reply_markup=InlineKeyboardMarkup(btn))
         
-        # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-        # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-        # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-        # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-        # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-        # ────────────────────────────────────────
+        
 
         time_taken = get_readable_time(time.time() - start_time)
         await b_sts.edit(f"<b>✅ ʙʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴍᴘʟᴇᴛᴇᴅ !</b>\n➖➖➖➖➖➖➖➖➖➖➖\n<b>⏱️ ᴛɪᴍᴇ ᴛᴀᴋᴇɴ :</b> {time_taken}\n<b>👥 ᴛᴏᴛᴀʟ ᴜsᴇʀs :</b> <code>{total_users}</code>\n<b>✅ sᴜᴄᴄᴇss :</b> <code>{success}</code>\n<b>❌ ғᴀɪʟᴇᴅ :</b> <code>{failed}</code>\n➖➖➖➖➖➖➖➖➖➖➖")

@@ -10,13 +10,6 @@ from plugins.route import web_server
 from database.users_db import db
 from utils import temp 
 
-# ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-# ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-# ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-# sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-# ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-# ────────────────────────────────────────
-
 # ✅ Clean Logging
 logging.basicConfig(
     level=logging.INFO,
@@ -101,7 +94,6 @@ class Bot(Client):
             await super().stop()
         print("🛑 ʙᴏᴛ sᴛᴏᴘᴘᴇᴅ")
 
-
 if __name__ == "__main__":
     
     # ✅ Initialize Bot
@@ -115,7 +107,7 @@ if __name__ == "__main__":
  / ___ |  | |/ /_____/ /_/ / /_/ / /_(__  )  
 /_/  |_|  |___/     /_____/\____/\__/____/   
 
-        ᴀᴠ ʙᴏᴛᴢ - ʙᴏᴛ ᴡᴏʀᴋɪɴɢ ᴘʀᴏᴘᴇʀʟʏ 🚀
+        BOT IS WORKING PROPERLY 🚀
 """)
         # 1. Start Bot
         await app.start()
