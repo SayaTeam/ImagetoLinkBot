@@ -6,13 +6,6 @@ from info import LOG_CHANNEL
 from utils import upload_to_catbox, upload_to_uguu, temp
 from database.users_db import db
 
-# ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-# ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-# ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-# sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-# ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-# ────────────────────────────────────────
-
 routes = web.RouteTableDef()
 
 @routes.get("/", allow_head=True)
@@ -33,12 +26,7 @@ async def upload_route_handler(request):
     if maintenance_mode: 
         return web.Response(text="🚧 Maintenance Mode Active", status=503)
     
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
     
     # Yahan humein actual upload mode chahiye (catbox/uguu)
     upload_mode = await db.get_upload_mode()
@@ -63,12 +51,7 @@ async def upload_route_handler(request):
             link = await upload_to_catbox(filename)
             if not link: link = await upload_to_uguu(filename)
 
-        # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-        # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-        # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-        # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-        # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-        # ────────────────────────────────────────
+        
 
         if link:
             await db.add_web_upload()
@@ -92,13 +75,6 @@ async def upload_route_handler(request):
         return web.Response(text=f"❌ Error: {str(e)}", status=500)
     finally:
         if filename and os.path.exists(filename): os.remove(filename)
-
-# ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-# ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-# ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-# sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-# ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-# ────────────────────────────────────────
 
 async def web_server(client):
     web_app = web.Application(client_max_size=30000000)

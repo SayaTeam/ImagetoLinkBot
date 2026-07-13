@@ -3,13 +3,6 @@ from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, Message
 from database.users_db import db
 
-# ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-# ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-# ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-# sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-# ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-# ────────────────────────────────────────
-
 @Client.on_message(filters.command(["myimage", "myfiles", "history"]))
 async def my_images_handler(client, message):
     await send_history_page(client, message, message.from_user.id, offset=0, edit=False)
@@ -24,12 +17,7 @@ async def send_history_page(client, message, user_id, offset=0, edit=False):
     files = await db.get_user_files(user_id, limit=limit, skip=offset)
     total_files = await db.total_files_by_user(user_id)
 
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
 
     if total_files == 0:
         text = "<b>❌ ʏᴏᴜ ʜᴀᴠᴇ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ᴀɴʏ ғɪʟᴇs ʏᴇᴛ !</b>"
@@ -65,12 +53,7 @@ async def delete_link_handler(client, message: Message):
     if len(message.command) < 2:
         return await message.reply_text(text="<b>⚠️ ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴍᴇ ᴀ ʟɪɴᴋ ᴛᴏ ᴅᴇʟᴇᴛᴇ !\n\nᴇxᴀᴍᴘʟᴇ :</b> <code>/delete https://catbox.moe/xyz.jpg</code>", quote=True, parse_mode=enums.ParseMode.HTML)
     
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
 
     link = message.command[1]
     await db.delete_file(message.from_user.id, link)
@@ -85,12 +68,7 @@ async def delete_all_command(client, message):
 async def delete_all_confirm_callback(client, query):
     await db.delete_all_files(query.from_user.id)
     
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
 
     await query.message.edit_text(text="<b>✅ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ᴀʟʟ ʏᴏᴜʀ ʜɪsᴛᴏʀʏ !</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("✖️ ᴄʟᴏsᴇ", callback_data="close_data")]]), parse_mode=enums.ParseMode.HTML)
 

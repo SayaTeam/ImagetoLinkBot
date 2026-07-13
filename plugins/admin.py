@@ -5,13 +5,6 @@ from database.users_db import db
 from info import ADMINS
 from utils import temp
 
-# ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-# ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-# ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-# sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-# ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-# ────────────────────────────────────────
-
 @Client.on_message(filters.command(["check", "info", "user"]) & filters.user(ADMINS))
 async def check_user_details(client, message: Message):
     if message.reply_to_message:
@@ -58,13 +51,6 @@ async def confirm_wipe_callback(client, query: CallbackQuery):
     target_id = int(query.data.split("_")[1])
     await db.delete_all_files(target_id)
     await query.message.edit_text(text=f"<b>✅ sᴜᴄᴄᴇssғᴜʟʟʏ ᴡɪᴘᴇᴅ ᴅᴀᴛᴀ ғᴏʀ {target_id} !</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("✖️ ᴄʟᴏsᴇ", callback_data="close_data")]]), parse_mode=enums.ParseMode.HTML)
-
-# ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-# ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-# ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-# sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-# ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-# ────────────────────────────────────────
 
 @Client.on_message(filters.command("ban") & filters.user(ADMINS))
 async def ban_user(client, message):
@@ -124,13 +110,6 @@ async def banned_users_list(client, message):
         await message.reply_document(document=file_path, caption=f"<b>🚫 ᴛᴏᴛᴀʟ ʙᴀɴɴᴇᴅ ᴜsᴇʀs :</b> <code>{total_banned}</code>\n<b>📂 ʟɪsᴛ ɪs ᴛᴏᴏ ʟᴏɴɢ, sᴇɴᴅɪɴɢ ғɪʟᴇ...</b>", parse_mode=enums.ParseMode.HTML)
         await msg.delete()
         if os.path.exists(file_path): os.remove(file_path)
-
-# ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-# ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-# ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-# sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-# ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-# ────────────────────────────────────────
 
 @Client.on_message(filters.command("mode") & filters.user(ADMINS))
 async def show_upload_mode(client, message):

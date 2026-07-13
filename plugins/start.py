@@ -1,9 +1,4 @@
-# ── AV BOTz ─────────────────────────────
-# Updates  : https://t.me/AV_BOTz_UPDATE
-# Owner    : @AV_OWNER_BOT
-# Support  : https://t.me/AV_SUPPORT_GROUP
-# Credit   : AV BOTz | Aman Vishwakarma
-# ────────────────────────────────────────
+
 
 from pyrogram import Client, filters, enums
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery

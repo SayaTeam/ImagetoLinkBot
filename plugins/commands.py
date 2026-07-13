@@ -2,22 +2,10 @@ from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from info import ADMINS
 
-# ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-# ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-# ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-# sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-# ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-# ────────────────────────────────────────
-
 @Client.on_message(filters.command(["commands", "help", "list"]))
 async def show_all_commands(client, message):
     
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
 
     text = (
         "<b>📜 ᴀʟʟ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs</b>\n"
@@ -41,21 +29,11 @@ async def show_all_commands(client, message):
         "➖➖➖➖➖➖➖➖➖➖➖"
     )
 
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
 
     buttons = [[InlineKeyboardButton("✖️ ᴄʟᴏsᴇ", callback_data="close_data")]]
     
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
     
     await message.reply_text(
         text=text,

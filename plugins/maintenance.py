@@ -4,13 +4,6 @@ from database.users_db import db
 from utils import temp
 from info import ADMINS, AUTH_CHANNEL, LOG_CHANNEL
 
-# ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-# ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-# ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-# sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-# ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-# ────────────────────────────────────────
-
 BYPASS_IDS = ADMINS + [LOG_CHANNEL]
 if isinstance(AUTH_CHANNEL, list): BYPASS_IDS.extend(AUTH_CHANNEL)
 elif AUTH_CHANNEL: BYPASS_IDS.append(AUTH_CHANNEL)
@@ -21,12 +14,7 @@ async def maintenance_check(client, message: Message):
     user_id = message.from_user.id if message.from_user else None
     if user_id in ADMINS or message.chat.id in BYPASS_IDS: return
 
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
 
     buttons = [[InlineKeyboardButton("💬 sᴜᴘᴘᴏʀᴛ", url="https://t.me/AV_SUPPORT_GROUP")]]
     await message.reply_text(
@@ -45,12 +33,7 @@ async def maintenance_command(client, message):
         [InlineKeyboardButton("🗑️ ᴄʟᴏsᴇ", callback_data="close_data")]
     ]
     
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
 
     await message.reply_text(
         text=f"<b>🛠 ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ\n\n📊 ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛᴜs : <code>{status}</code>\n\n⚙️ sᴇʟᴇᴄᴛ ᴀɴ ᴏᴘᴛɪᴏɴ ʙᴇʟᴏᴡ :</b>",
@@ -71,12 +54,7 @@ async def maintenance_callback(client, query: CallbackQuery):
         temp.MAINTENANCE = False
         await db.set_maintenance_mode(False)
 
-        # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-        # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-        # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-        # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-        # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-        # ────────────────────────────────────────
+        
 
         await query.message.edit_text("<b>❌ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ ᴅɪsᴀʙʟᴇᴅ !</b>", parse_mode=enums.ParseMode.HTML)
         

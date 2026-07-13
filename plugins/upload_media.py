@@ -6,13 +6,6 @@ from utils import upload_to_catbox, upload_to_uguu
 from plugins.fsub import is_user_joined
 from database.users_db import db
 
-# ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-# ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-# ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-# sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-# ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-# ────────────────────────────────────────
-
 MEDIA_GROUPS = set()
 
 @Client.on_message(filters.photo | filters.animation | filters.video)
@@ -27,12 +20,7 @@ async def upload_media(client: Client, message: Message):
     # ✅ GET CURRENT UPLOAD MODE FROM DB
     upload_mode = await db.get_upload_mode()
     
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
 
     # ✅ ALBUM HANDLING
     if message.media_group_id:
@@ -83,12 +71,7 @@ async def upload_media(client: Client, message: Message):
             MEDIA_GROUPS.discard(message.media_group_id)
         return
 
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
 
     # ✅ SINGLE FILE HANDLING
     status_msg = await message.reply_text(text="<b>⏳ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴍᴇᴅɪᴀ...</b>", quote=True, parse_mode=enums.ParseMode.HTML)

@@ -2,13 +2,6 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from info import DB_URL
 from datetime import datetime
 
-# ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-# ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-# ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-# sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-# ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-# ────────────────────────────────────────
-
 client = AsyncIOMotorClient(DB_URL)
 mydb = client["avbotz"]
 
@@ -36,7 +29,6 @@ class Database:
     async def delete_user(self, user_id):
         await self.users.delete_many({'id': int(user_id)})
 
-
     async def add_join_req(self, user_id: int, channel_id: int):
         await self.req.update_one(
             {'user_id': user_id},
@@ -54,12 +46,7 @@ class Database:
     async def del_join_req(self):
         await self.req.drop()
         
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
 
     async def get_maintenance_mode(self):
         data = await self.config.find_one({"_id": "maintenance_mode"})
@@ -98,12 +85,7 @@ class Database:
     async def total_files_count(self):
         return await self.uploads.count_documents({})
 
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
 
     async def add_web_upload(self):
         await self.config.update_one({"_id": "website_stats"}, {"$inc": {"total_uploads": 1}}, upsert=True)
@@ -128,12 +110,7 @@ class Database:
     async def total_banned_users_count(self):
         return await self.users.count_documents({"banned": True})
         
-    # ── ᴀᴠ ʙᴏᴛᴢ ─────────────────────────────
-    # ᴜᴘᴅᴀᴛᴇs  : https://t.me/AV_BOTz_UPDATE
-    # ᴏᴡɴᴇʀ    : @AV_OWNER_BOT
-    # sᴜᴘᴘᴏʀᴛ  : https://t.me/AV_SUPPORT_GROUP
-    # ᴄʀᴇᴅɪᴛ   : ᴀᴠ ʙᴏᴛᴢ | ᴀᴍᴀɴ ᴠɪsʜᴡᴀᴋᴀʀᴍᴀ
-    # ────────────────────────────────────────
+    
 
     async def get_top_uploaders(self):
         pipeline = [{"$group": {"_id": "$user_id", "count": {"$sum": 1}}}, {"$sort": {"count": -1}}]
