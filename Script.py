@@ -11,7 +11,7 @@ class script(object):
 🛡️ sᴇᴄᴜʀᴇ & ᴘʀɪᴠᴀᴛᴇ
 🖥️ ᴡᴇʙsɪᴛᴇ : <a href='{}'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
 
-ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/szxlie'>ᴀᴍᴀɴ ᴅᴇᴠᴇʟᴏᴘᴇʀ</a></b>"""
+ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/szxlie'>ᴅᴇᴠᴇʟᴏᴘᴇʀ</a></b>"""
     
 
     
@@ -54,7 +54,7 @@ class script(object):
     ABOUT_TXT = """<b>╭─━━━ ✦ ABOUT BOT ✦ ━━━─╮
 │
 │ 🤖 ɴᴀᴍᴇ : <code>{}</code>
-│ 👑 ᴏᴡɴᴇʀ : <a href="https://t.me/szxlie">ᴀᴍᴀɴ ᴅᴇᴠᴇʟᴏᴘᴇʀ</a>
+│ 👑 ᴏᴡɴᴇʀ : <a href="https://t.me/szxlie">ᴅᴇᴠᴇʟᴏᴘᴇʀ</a>
 │ 📢 ᴜᴘᴅᴀᴛᴇs : <a href="https://t.me/SayaProject">UPDATE CHANNEL</a>
 │ 🚀 ᴠᴇʀsɪᴏɴ : v2.6
 │ 🐍 ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ 3
