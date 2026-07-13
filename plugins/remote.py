@@ -9,7 +9,7 @@ from info import LOG_CHANNEL
 @Client.on_message(filters.command(["remote", "url", "upload"]))
 async def remote_upload(client, message):
     if await db.is_banned(message.from_user.id):
-        return await message.reply(text="<b>🚫 ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ !\n\n👮‍♂️ ᴄᴏɴᴛᴀᴄᴛ : @AV_OWNER_BOT</b>", quote=True, parse_mode=enums.ParseMode.HTML)
+        return await message.reply(text="<b>🚫 ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ !\n\n👮‍♂️ ᴄᴏɴᴛᴀᴄᴛ : @SayaProject</b>", quote=True, parse_mode=enums.ParseMode.HTML)
 
     
 

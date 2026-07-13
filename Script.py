@@ -9,9 +9,7 @@ class script(object):
 ⚡️ ғᴀsᴛ ᴜᴘʟᴏᴀᴅs
 🔗 ᴘᴇʀᴍᴀɴᴇɴᴛ ʟɪɴᴋs
 🛡️ sᴇᴄᴜʀᴇ & ᴘʀɪᴠᴀᴛᴇ
-🖥️ ᴡᴇʙsɪᴛᴇ : <a href='{}'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
-
-ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/AV_OWNER_BOT'>ᴀᴍᴀɴ ᴅᴇᴠᴇʟᴏᴘᴇʀ</a></b>"""
+🖥️ ᴡᴇʙsɪᴛᴇ : <a href='{}'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
     
 
     
@@ -51,17 +49,17 @@ class script(object):
 
 ᴅᴜᴇ ᴛᴏ sᴇʀᴠᴇʀ ᴏᴠᴇʀʟᴏᴀᴅ, ᴏɴʟʏ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜɪs ʙᴏᴛ !</b>"""
     
-    ABOUT_TXT = """<b>╭─━━━ ✦ ABOUT BOT ✦ ━━━─╮
+    ABOUT_TXT = """<b>╭━━━━━━━ ✦ ABOUT BOT ✦ ━━━━━━━╮
 │
 │ 🤖 ɴᴀᴍᴇ : <code>{}</code>
-│ 👑 ᴏᴡɴᴇʀ : <a href="https://t.me/AV_OWNER_BOT">ᴀᴍᴀɴ ᴅᴇᴠᴇʟᴏᴘᴇʀ</a>
-│ 📢 ᴜᴘᴅᴀᴛᴇs : <a href="https://t.me/AV_BOTz_UPDATE">UPDATE CHANNEL</a>
+│ 👑 ᴏᴡɴᴇʀ : <a href="https://t.me/SayaProject">DEVELOPER</a>
+│ 📢 ᴜᴘᴅᴀᴛᴇs : <a href="https://t.me/SayaProject">UPDATE CHANNEL</a>
 │ 🚀 ᴠᴇʀsɪᴏɴ : v2.6
 │ 🐍 ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ 3
 │ 📚 ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ
 │ 📡 ʜᴏsᴛᴇᴅ ᴏɴ : ᴋᴏʏᴇʙ
 │
-╰─━━━ ✦ POWERED BY DEVELOPER ✦ ━━━─╯</b>"""
+╰━━━━━━━ ✦ POWERED BY DEVELOPER ✦ ━━━━━━━╯</b>"""
 
     LOG_TEXT = """<b>#NewUser {}
     

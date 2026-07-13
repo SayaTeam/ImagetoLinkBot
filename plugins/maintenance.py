@@ -16,7 +16,7 @@ async def maintenance_check(client, message: Message):
 
     
 
-    buttons = [[InlineKeyboardButton("💬 sᴜᴘᴘᴏʀᴛ", url="https://t.me/AV_SUPPORT_GROUP")]]
+    buttons = [[InlineKeyboardButton("💬 sᴜᴘᴘᴏʀᴛ", url="https://t.me/SayaProject")]]
     await message.reply_text(
         text="<b>🚧 ʙᴏᴛ ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ !\n\n⚠️ ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ.\n⏳ ᴡᴇ ᴀʀᴇ ᴜᴘᴅᴀᴛɪɴɢ ᴛʜᴇ sᴇʀᴠᴇʀ...</b>",
         reply_markup=InlineKeyboardMarkup(buttons),

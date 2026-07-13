@@ -63,7 +63,7 @@ async def ban_user(client, message):
         try:
             await client.send_message(
                 chat_id=user_id,
-                text="<b>🚫 ʏᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ !\n\n👮‍♂️ ᴄᴏɴᴛᴀᴄᴛ : @AV_OWNER_BOT</b>",
+                text="<b>🚫 ʏᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ !\n\n👮‍♂️ ᴄᴏɴᴛᴀᴄᴛ : @SayaProject</b>",
                 parse_mode=enums.ParseMode.HTML
             )
         except Exception: pass
